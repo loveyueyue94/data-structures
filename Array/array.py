@@ -1,7 +1,7 @@
 class Array(object):
     def __init__(self, number=10):
         self.__size = 0
-        self.__data = [0] * number
+        self.__data = [None] * number
 
     def add(self, index, element):
         """
@@ -130,7 +130,7 @@ class Array(object):
         动态扩张数组的大小
         :param size: 需要扩张的大小
         """
-        new_data = [0] * size
+        new_data = [None] * size
         for i, e in enumerate(self.__data[0: self.__size]):
             new_data[i] = e
         self.__data = new_data
